@@ -10,7 +10,7 @@ use App\Models\Payment;
 use App\Models\OrderItem;
 use App\Models\Product;
 use App\Models\Review;
-use  Auth;
+use  Illuminate\Support\Facades\Auth;
 class OrderController extends Controller
 {
     //frontend

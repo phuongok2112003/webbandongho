@@ -26,7 +26,7 @@ class CreateOrderTable extends Migration
             $table->foreign('customer_id')->references('id')->on('customer');
 
             $table->integer('total_quantity');
-            $table->integer('grand_total'); 
+            $table->integer('grand_total');
             $table->string('note')->nullable();
             $table->string('status');
             $table->timestamps();

@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Admin;
 use App\Models\Person;
 use App\Models\Account;
-use Hash;
-use Auth;
+use lluminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 class AdminController extends Controller
 {
     //

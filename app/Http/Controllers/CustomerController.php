@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Customer;
 use App\Models\Person;
 use App\Models\Account;
-use Auth;
-use Hash;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 class CustomerController extends Controller
 {
 	//frontend

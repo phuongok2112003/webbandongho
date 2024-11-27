@@ -10,7 +10,7 @@ use App\Models\Order;
 use App\Models\Customer;
 use App\Models\Review;
 use App\Models\Category;
-use DB;
+use Illuminate\Support\Facades\DB;
 class PageController extends Controller
 {
     //

@@ -124,10 +124,10 @@
 					</tr>
 					<!-- modal review $item->review->id -->
 					@endforeach
-				</tbody>					
+				</tbody>
 			</table>
 		</div>
 	</div>
 </div>
 </div>
-@endsection   
+@endsection
