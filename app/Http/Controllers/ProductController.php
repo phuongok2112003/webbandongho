@@ -48,17 +48,18 @@ class ProductController extends Controller
     	return view('backend.product.add_edit',['listCategory'=>$listCategory]);
     }
     public function postAdd(Request $request){
+        
         $request->validate([
             'stringDescription' => 'max:2000',
             'intPromotion_price' => 'lt:intPrice',
-            'images' => 'mimes:jpeg,jpg,png'
+            // 'images' => 'mimes:jpeg,jpg,png'
         ],
         [
             'max' => 'Trường trên tối đa :max ký tự',
             'lt' => 'Giá ưu đãi phải nhỏ hơn giá thường',
-            'mimes' => 'Ảnh định dạng jpeg,jpg,png'
+            // 'mimes' => 'Ảnh định dạng jpeg,jpg,png'
         ]);
-
+      
     	$product = new Product;
     	$product->category_id = $request->intCategory_id;
     	$product->name = $request->stringName;
@@ -120,7 +121,7 @@ class ProductController extends Controller
             #xóa ảnh cũ
             $oldImages = Image::where('product_id',$id)->get();
             foreach ($oldImages as $oldImage ) {
-                if(file_exists('images/product/'.$oldImage->name)) 
+                if(file_exists('images/product/'.$oldImage->name))
                     unlink('images/product/'.$oldImage->name);
             }
             Image::where('product_id',$id)->delete();
@@ -140,7 +141,7 @@ class ProductController extends Controller
         return redirect(url('/admin-page/product/list'))->with(['typeMsg'=>'success','msg'=>'Sửa thành công']);
     }
     public function getDelete($id){
-        $oldImage = Image::where('product_id',$id)->get();
+        $oldImages = Image::where('product_id',$id)->get();
         foreach ($oldImages as $oldImage ) {
             if(file_exists('images/product/'.$oldImage->name)) 
                 unlink('images/product/'.$oldImage->name);

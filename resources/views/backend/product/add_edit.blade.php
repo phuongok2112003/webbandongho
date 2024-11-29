@@ -90,12 +90,12 @@
 				</div>
 			</div>
 			<!-- các ảnh -->
-			<div class="alert-img alert alert-info text-center mt-1">Tải lên tối đa 4 ảnh 
+			<div class="alert-img alert alert-info text-center mt-1">Tải lên tối đa 4 ảnh
 				</div>
 			<div class="row mb-2">
 				<div class="col-sm-3"><b>Ảnh sản phẩm<b></div>
 				<div class="col-sm-9">
-					<input class="images" type="file" name="images[]" class="btn btn-success" accept="image/png, image/jpeg" multiple {{(!isset($product->images)) ?'required':'' }}>
+					<input class="images" type="file" name="images[]" class="btn btn-success" accept="image/*" multiple {{(!isset($product->images)) ?'required':'' }}>
 				</div>
 			</div>
 			@if($errors->has('images'))
