@@ -52,11 +52,11 @@ class ProductController extends Controller
         $request->validate([
             'stringDescription' => 'max:2000',
             'intPromotion_price' => 'lt:intPrice',
-            // 'images' => 'mimes:jpeg,jpg,png'
+            // 'image' => 'required|mimes:jpeg,png,jpg,gif'
         ],
         [
             'max' => 'Trường trên tối đa :max ký tự',
-            'lt' => 'Giá ưu đãi phải nhỏ hơn giá thường',
+            'lt' => 'Giá ưu đãi phải nhỏ hơn giá thường'
             // 'mimes' => 'Ảnh định dạng jpeg,jpg,png'
         ]);
       
@@ -96,12 +96,12 @@ class ProductController extends Controller
         $request->validate([
             'stringDescription' => 'max:2000',
             'intPromotion_price' => 'lt:intPrice',
-            'images' => 'mimes:jpeg,jpg,png'
+            // 'images' => 'mimes:jpeg,jpg,png'
         ],
         [
             'max' => 'Trường trên tối đa :max ký tự',
             'lt' => 'Giá ưu đãi phải nhỏ hơn giá thường',
-            'mimes' => 'Ảnh định dạng jpeg,jpg,png'
+            // 'mimes' => 'Ảnh định dạng jpeg,jpg,png'
         ]);
 
     	$listCategory = Category::all();

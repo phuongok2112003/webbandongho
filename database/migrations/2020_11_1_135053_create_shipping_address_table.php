@@ -19,7 +19,7 @@ class CreateShippingAddressTable extends Migration
             $table->string('recipient_phone');
             $table->string('province');
             $table->string('district');
-            $table->string('wards');;
+            $table->string('wards');
             $table->string('address_detail');
             $table->timestamps();
         });
