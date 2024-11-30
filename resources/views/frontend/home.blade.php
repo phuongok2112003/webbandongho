@@ -31,23 +31,23 @@
 			          @foreach($slides as $key => $slide)
 			          @if($key == 0)
 			          <div class="carousel-item active embed-responsive-item"> 
-			          	<img class="d-block w-100" src="{{('images/slide/'.$slide->name)}}" alt="slide{{$slide->id}}"> 
+			          	<img class="d-block w-100" src="{{('images/slide/'.$slide->name)}}" alt="slide{{$slide->id}}">
 			          </div>
 			          @else
 			          <div class="carousel-item embed-responsive-item"> 
-			          	<img class="d-block w-100" src="{{('images/slide/'.$slide->name)}}" alt="slide{{$slide->id}}"> 
+			          	<img class="d-block w-100" src="{{('images/slide/'.$slide->name)}}" alt="slide{{$slide->id}}">
 			          </div>
 			          @endif
 			          @endforeach
 			        </div>
-			        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"> 
+			        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
 			          <span class="carousel-control-prev-icon" aria-hidden="true"></span> 
 			          <span class="sr-only">Previous</span> 
 			        </a>
 			        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"> 
-			          <span class="carousel-control-next-icon" aria-hidden="true"></span> 
-			          <span class="sr-only">Next</span> 
-			        </a> 
+			          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			          <span class="sr-only">Next</span>
+			        </a>
 			      </div>
 			</div>
 		</div>
@@ -89,14 +89,14 @@
 								    <p><i>{{ $item->category->name}}</i></p>
 								    @if($item->promotion_price!=0)
 								    <h6 class="price" style="color: red">
-								     <small style="color: grey"><s>{{ number_format($item->price)}}đ</s></small> 							 
+								     <small style="color: grey"><s>{{ number_format($item->price)}}đ</s></small>
 								    	{{number_format($item->promotion_price)}}đ
 								    </h6>
 								    @else
-								    <h6 class="price" style="color: red"> 							 
+								    <h6 class="price" style="color: red">
 								    	{{ number_format($item->price)}}đ
 								    </h6>
-								    @endif							
+								    @endif
 							  	</div>
 							</div>	
 						<!-- end sản phẩm -->		
@@ -168,7 +168,7 @@
 </div>
 <script type="text/javascript">
 	$(function(){
-		/*slide product hơi cùi*/
+	
 		/*list sale*/
 		$('.button-sale .button-left').click(function(){
 			var left = parseFloat($('.list-sale').css('left'));

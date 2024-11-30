@@ -3,7 +3,7 @@
 	<title>Sản phẩm</title>
 @endsection
 @section('content')
-<?php 
+<?php
 	$cart = session()->has('cart') ? session('cart') : null;
 ?>
 <div class="container">

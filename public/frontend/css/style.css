@@ -124,7 +124,7 @@ white-space: nowrap;
 	right: 1%;
 	display: none;
 	z-index: 3;
-	border :;
+	border :0;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 /*product detail*/

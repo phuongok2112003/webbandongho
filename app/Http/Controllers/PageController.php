@@ -27,9 +27,9 @@ class PageController extends Controller
     public function getAdminPage(){
         #biểu đồ doanh thu theo 30 ngày
         $currentDate = date('Y-m-d');
-        $arrayDate = array();  
+        $arrayDate = array();
         $dateI = date('Y-m-d',strtotime('-15 Days'));
-        $i = 0; 
+        $i = 0;
         while($dateI<=$currentDate){
             array_push($arrayDate, $dateI);
             $i++;

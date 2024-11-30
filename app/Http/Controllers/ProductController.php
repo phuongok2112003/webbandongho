@@ -40,7 +40,7 @@ class ProductController extends Controller
     }
     //backend
     public function getList(){
-    	$listProduct = Product::all(); 
+    	$listProduct = Product::all();
     	return view('backend.product.list',['listProduct'=>$listProduct]);
     }
     public function getAdd(){
@@ -143,7 +143,7 @@ class ProductController extends Controller
     public function getDelete($id){
         $oldImages = Image::where('product_id',$id)->get();
         foreach ($oldImages as $oldImage ) {
-            if(file_exists('images/product/'.$oldImage->name)) 
+            if(file_exists('images/product/'.$oldImage->name))
                 unlink('images/product/'.$oldImage->name);
         }
         Product::destroy($id);
